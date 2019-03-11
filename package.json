@@ -1,7 +1,7 @@
 {
-  "name": "apindex",
+  "name": "aqindex",
   "version": "1.0.0",
-  "description": "air polution index Serbia",
+  "description": "air quality index Serbia",
   "main": "app.js",
   "scripts": {
     "start": "node app.js"
