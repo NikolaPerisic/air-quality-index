@@ -10,17 +10,17 @@ let data;
 
 const apicallfunc = () => {
     let date = new Date().toISOString().slice(0, 10);
-    let hour = `${new Date().getHours() - 2}:00`;
-    hour.length === 4 ? (hour = `0${hour}`) : hour;
+    // let hour = `${new Date().getHours() - 2}:00`;
+    // hour.length === 4 ? (hour = `0${hour}`) : hour;
 
     console.log(date);
-    console.log(hour);
+    // console.log(hour);
 
     axios
         .get(
             `http://data.sepa.gov.rs/api/3/action/datastore_search?resource_id=${
                 process.env.KEY
-            }&q=${date}T${hour}`
+            }&q=${date}T17:00`
         )
         .then(function(response) {
             data = [...response.data.result.records];
